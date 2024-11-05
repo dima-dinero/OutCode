@@ -1,0 +1,21 @@
+.button {
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1;
+  color: var(--text-alternate);
+  background-color: var(--background-alternate);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.is-secondary {
+  color: var(--text-primary);
+  background-color: var(--background-secondary);
+}

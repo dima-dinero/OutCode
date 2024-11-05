@@ -1,0 +1,19 @@
+:root {
+  --background-primary: #f6f5fa;
+  --background-secondary: #ffffff;
+  --background-alternate: #000000;
+  --background-accent: #F6F5FA;
+  --text-primary: #161616;
+  --text-alternate: #ffffff;
+  --border-primary: #f6f5fa;
+}
+
+[data-theme='dark'] {
+  --background-primary: #000000;
+  --background-secondary: #161616;
+  --background-alternate: #ffffff;
+  --background-accent: #3F3F3F;
+  --text-primary: #FFFFFF;
+  --text-alternate: #161616;
+  --border-primary: #3F3F3F;
+}
