@@ -9,6 +9,7 @@ export interface AvatarPreviewProps {
     hasAvatar?: boolean;
     firstName?: string;
     lastName?: string;
+    variant?: string;
 }
 
 export const AvatarPreview = ({
@@ -16,6 +17,7 @@ export const AvatarPreview = ({
     hasAvatar,
     firstName = 'Dmitry',
     lastName = 'Zozulya',
+    variant
 }: AvatarPreviewProps) => {
     const { initials, gradient } = useMemo(
         () => generateAvatar(firstName, lastName),
@@ -24,7 +26,13 @@ export const AvatarPreview = ({
 
     return (
         <div
-            className={classNames(styles['avatar-preview'], className)}
+            className={classNames(
+                styles['avatar-preview'],
+                {
+                    [styles['is-larger']]: variant === 'larger',
+                },
+                className,
+            )}
             style={{ background: hasAvatar ? 'transparent' : gradient }}
         >
             {hasAvatar ? (

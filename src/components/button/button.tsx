@@ -4,7 +4,7 @@ import styles from './button.module.scss';
 export interface ButtonProps {
     className?: string;
     variant?: string;
-    text: string;
+    text?: string;
 }
 
 export const Button = ({ className, variant, text = 'Button' }: ButtonProps) => {
