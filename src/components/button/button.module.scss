@@ -13,13 +13,15 @@
   flex-direction: column;
   align-items: center;
   align-content: center;
-}
-
-.button:active {
-  transform: scale(0.9);
+  text-wrap: nowrap;
 }
 
 .is-secondary {
   color: var(--text-primary);
   background-color: var(--background-secondary);
+}
+
+.is-transparent {
+  color: var(--text-primary);
+  background-color: transparent;
 }

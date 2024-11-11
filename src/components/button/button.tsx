@@ -13,6 +13,7 @@ export const Button = ({ className, variant, text = 'Button' }: ButtonProps) => 
             className={classNames(
                 styles[`button`],
                 { [styles['is-secondary']]: variant === 'secondary' },
+                { [styles['is-transparent']]: variant === 'transparent' },
                 className,
             )}
         >

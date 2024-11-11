@@ -8,9 +8,9 @@ export interface FiltersSidebarProps {
 
 export const FiltersSidebar = ({ className }: FiltersSidebarProps) => {
     return (
-        <div className={classNames(className, styles.sidebar)}>
+        <aside className={classNames(className, styles.sidebar)}>
             <div />
             <Button text="Reset Filters" />
-        </div>
+        </aside>
     );
 };
