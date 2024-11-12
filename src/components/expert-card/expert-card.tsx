@@ -144,7 +144,7 @@ export const ExpertCard = ({ className, profile = defaultProfile }: ExpertCardPr
                     <a href="/" className={styles['expert-card_button-link']}>
                         <Button text="Learn More" />
                     </a>
-                    <Button text="Add to favorite" variant="transparent" />
+                    <Button text="Add to favorite" variant="secondary" />
                 </div>
             </div>
         </div>

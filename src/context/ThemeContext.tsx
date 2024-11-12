@@ -14,7 +14,7 @@ export const ThemeContext = createContext<ThemeContextProps>({
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [theme, setTheme] = useState<Theme>(() => {
-        const savedTheme = (localStorage.getItem('theme') as Theme) || null;
+        const savedTheme = (localStorage.getItem('theme') as Theme) || 'light';
 
         if (savedTheme) {
             return savedTheme;
