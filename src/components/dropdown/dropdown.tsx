@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import styles from './dropdown.module.scss';
-import UserIconSvg from '../../assets/icons/UserIcon.svg?react';
-import CaseIconSvg from '../../assets/icons/CaseIcon.svg?react';
-import FeedbackIconSvg from '../../assets/icons/FeedbackIcon.svg?react';
-import SettingsIconSvg from '../../assets/icons/SettingsIcon.svg?react';
-import LogoutIconSvg from '../../assets/icons/LogoutIcon.svg?react';
-import ExpertIconSvg from '../../assets/icons/ExpertIcon.svg?react';
+import UserIconSvg from '../../assets/icons/dropdown/UserIcon.svg?react';
+import CaseIconSvg from '../../assets/icons/dropdown/CaseIcon.svg?react';
+import FeedbackIconSvg from '../../assets/icons/dropdown/FeedbackIcon.svg?react';
+import SettingsIconSvg from '../../assets/icons/dropdown/SettingsIcon.svg?react';
+import LogoutIconSvg from '../../assets/icons/dropdown/LogoutIcon.svg?react';
+import ExpertIconSvg from '../../assets/icons/dropdown/ExpertIcon.svg?react';
 import { AvatarPreview } from '../avatar-preview/avatar-preview';
 
 export interface DropdownProps {

@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import styles from './circle-button.module.scss';
-import SunIcon from '../../assets/icons/SunIcon.svg?react';
-import MoonIcon from '../../assets/icons/MoonIcon.svg?react';
-import BellIcon from '../../assets/icons/BellIcon.svg?react';
-import ArrowIcon from '../../assets/icons/ArrowIcon.svg?react';
-import LoginIcon from '../../assets/icons/LoginIcon.svg?react';
+import SunIcon from '../../assets/icons/circle-button/SunIcon.svg?react';
+import MoonIcon from '../../assets/icons/circle-button/MoonIcon.svg?react';
+import BellIcon from '../../assets/icons/circle-button/BellIcon.svg?react';
+import ArrowIcon from '../../assets/icons/circle-button/ArrowIcon.svg?react';
+import LoginIcon from '../../assets/icons/circle-button/LoginIcon.svg?react';
 
 export interface CircleButtonProps {
     className?: string;

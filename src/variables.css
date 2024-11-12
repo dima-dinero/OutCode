@@ -17,3 +17,7 @@
   --text-alternate: #161616;
   --border-primary: rgba(255, 255, 255, 0.1);
 }
+
+[data-theme='dark'] .sidebar {
+  background-color: var(--background-secondary);
+}
