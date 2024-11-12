@@ -5,7 +5,7 @@
   --background-accent: #F6F5FA;
   --text-primary: #161616;
   --text-alternate: #ffffff;
-  --border-primary: #f6f5fa;
+  --border-primary: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='dark'] {
@@ -15,5 +15,5 @@
   --background-accent: #3F3F3F;
   --text-primary: #FFFFFF;
   --text-alternate: #161616;
-  --border-primary: #3F3F3F;
+  --border-primary: rgba(255, 255, 255, 0.1);
 }

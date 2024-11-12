@@ -50,17 +50,20 @@ const defaultProfile: Profile = {
         {
             id: 1,
             title: 'Case Study 1',
-            previewURL: 'https://cdn.prod.website-files.com/64f9399ca7d13575ff21a675/65de054a8465b69c31f45c57_Thumbnail_layout-section.jpg',
+            previewURL:
+                'https://habrastorage.org/getpro/freelansim/allfiles/163/1637/1637901/e591518da3.jpg',
         },
         {
             id: 2,
             title: 'Case Study 2',
-            previewURL: 'https://www.hubspot.com/hs-fs/hubfs/case-study-examples.jpg?width=595&height=400&name=case-study-examples.jpg',
+            previewURL:
+                'https://habrastorage.org/getpro/freelansim/allfiles/148/1489/1489073/7c0db2e255.png',
         },
         {
             id: 3,
             title: 'Case Study 3',
-            previewURL: '',
+            previewURL:
+                'https://habrastorage.org/getpro/freelansim/allfiles/163/1638/1638073/df7992f4ed.png',
         },
         {
             id: 4,
@@ -77,7 +80,7 @@ export const ExpertCard = ({ className, profile = defaultProfile }: ExpertCardPr
     return (
         <div className={classNames(className, styles['expert-card'])}>
             <div className={classNames(styles['expert-card_column'], styles['is-left'])}>
-                <a href="/">
+                <a href="/" className={styles['expert-card_avatar-link']}>
                     <AvatarPreview
                         firstName={profile.first_name || defaultProfile.first_name}
                         lastName={profile.last_name || defaultProfile.last_name}
