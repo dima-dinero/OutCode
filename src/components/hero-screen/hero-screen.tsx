@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import styles from './hero-screen.module.scss';
 import { Button } from '../button/button';
+import { Link } from 'react-router-dom';
 
 export interface HeroScreenProps {
     className?: string;
@@ -19,7 +20,9 @@ export const HeroScreen = ({ className }: HeroScreenProps) => {
                     </p>
                 </div>
                 <div className={styles.buttons_wrapper}>
-                    <Button text="Find an expert" />
+                    <Link to="/experts">
+                        <Button text="Find an expert" />
+                    </Link>
                     <Button variant="secondary" text="Find orders" />
                 </div>
             </div>

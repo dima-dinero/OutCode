@@ -10,7 +10,7 @@ export const FiltersSidebar = ({ className }: FiltersSidebarProps) => {
     return (
         <aside className={classNames(className, styles.sidebar)}>
             <div />
-            <Button text="Reset Filters" hasIcon />
+            <Button text="Reset Filters" hasIcon variant="secondary" />
         </aside>
     );
 };

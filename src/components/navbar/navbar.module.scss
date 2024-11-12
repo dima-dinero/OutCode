@@ -53,6 +53,11 @@
   font-size: 0.875rem;
 }
 
+.is-active {
+  color: var(--text-alternate);
+  background-color: var(--background-alternate);
+}
+
 .navbar_link:active {
   transform: scale(0.9);
 }
