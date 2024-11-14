@@ -28,9 +28,9 @@
 
 .is-secondary {
   color: var(--text-primary);
-  background-color: var(--background-accent);
+  background-color: var(--background-secondary);
 }
 
 .is-secondary:hover {
-  background-color: var(--background-accent-secondary);
+  background-color: var(--background-accent);
 }

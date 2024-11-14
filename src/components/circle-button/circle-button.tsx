@@ -12,6 +12,7 @@ export interface CircleButtonProps {
     iconType?: 'sun' | 'moon' | 'bell' | 'arrow' | 'login';
     hasAlert?: boolean;
     isVisible?: boolean;
+    size?: 'small' | 'medium' | 'large';
     onClick?: () => void;
 }
 
@@ -21,6 +22,7 @@ export const CircleButton = ({
     iconType,
     hasAlert,
     isVisible = true,
+    size,
     onClick,
 }: CircleButtonProps) => {
     const renderIcon = () => {
@@ -43,7 +45,15 @@ export const CircleButton = ({
     return (
         <button
             onClick={onClick}
-            className={classNames(styles['circle-button'], className)}
+            className={classNames(
+                styles['circle-button'],
+                {
+                    [styles['']]: size === 'small',
+                    [styles['is-medium']]: size === 'medium',
+                    [styles['is-large']]: size === 'large',
+                },
+                className,
+            )}
             style={{ display: isVisible ? 'auto' : 'none' }}
         >
             {hasAlert && (

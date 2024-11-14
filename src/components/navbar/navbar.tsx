@@ -78,7 +78,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                         onClick={toggleTheme}
                     />
                     <CircleButton iconType="bell" hasAlert />
-                    <CircleButton iconType="login" isVisible={false} />
+                    <CircleButton iconType="login" />
                     <Dropdown />
                 </div>
             </nav>

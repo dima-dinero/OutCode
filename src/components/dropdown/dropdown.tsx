@@ -7,7 +7,7 @@ import FeedbackIconSvg from '../../assets/icons/dropdown/FeedbackIcon.svg?react'
 import SettingsIconSvg from '../../assets/icons/dropdown/SettingsIcon.svg?react';
 import LogoutIconSvg from '../../assets/icons/dropdown/LogoutIcon.svg?react';
 import ExpertIconSvg from '../../assets/icons/dropdown/ExpertIcon.svg?react';
-import { AvatarPreview } from '../avatar-preview/avatar-preview';
+import { Avatar } from '../avatar/avatar';
 
 export interface DropdownProps {
     className?: string;
@@ -39,7 +39,7 @@ export const Dropdown = ({ className }: DropdownProps) => {
     return (
         <div ref={dropdownRef} className={styles.dropdown}>
             <button className={styles.dropdown_toggle} onClick={handleToggle}>
-                <AvatarPreview />
+                <Avatar />
             </button>
             <div
                 className={classNames(styles.dropdown_bottom, { [styles.open]: isOpen }, className)}

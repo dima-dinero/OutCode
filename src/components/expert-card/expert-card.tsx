@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './expert-card.module.scss';
-import { AvatarPreview } from '../avatar-preview/avatar-preview';
+import { Avatar } from '../avatar/avatar';
 import { InstrumentTag } from '../instrument-tag/instrument-tag';
 import { Button } from '../button/button';
 
@@ -81,7 +81,7 @@ export const ExpertCard = ({ className, profile = defaultProfile }: ExpertCardPr
         <div className={classNames(className, styles['expert-card'])}>
             <div className={classNames(styles['expert-card_column'], styles['is-left'])}>
                 <a href="/" className={styles['expert-card_avatar-link']}>
-                    <AvatarPreview
+                    <Avatar
                         firstName={profile.first_name || defaultProfile.first_name}
                         lastName={profile.last_name || defaultProfile.last_name}
                         variant="larger"

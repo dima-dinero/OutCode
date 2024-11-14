@@ -22,8 +22,14 @@
   object-fit: cover;
 }
 
-.is-larger {
+.is-medium {
   width: 4rem;
   height: 4rem;
   font-size: 1.25rem;
+}
+
+.is-large {
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.5rem;
 }
