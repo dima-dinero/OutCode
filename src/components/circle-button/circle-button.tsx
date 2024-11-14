@@ -5,11 +5,13 @@ import MoonIcon from '../../assets/icons/circle-button/MoonIcon.svg?react';
 import BellIcon from '../../assets/icons/circle-button/BellIcon.svg?react';
 import ArrowIcon from '../../assets/icons/circle-button/ArrowIcon.svg?react';
 import LoginIcon from '../../assets/icons/circle-button/LoginIcon.svg?react';
+import ArrowUpIcon from '../../assets/icons/circle-button/ArrowUpIcon.svg?react';
+import StarIcon from '../../assets/icons/circle-button/StarIcon.svg?react';
 
 export interface CircleButtonProps {
     className?: string;
     text?: string;
-    iconType?: 'sun' | 'moon' | 'bell' | 'arrow' | 'login';
+    iconType?: 'sun' | 'moon' | 'bell' | 'arrow' | 'login' | 'arrow-up' | 'star';
     hasAlert?: boolean;
     isVisible?: boolean;
     size?: 'small' | 'medium' | 'large';
@@ -37,6 +39,10 @@ export const CircleButton = ({
                 return <ArrowIcon width={16} height={16} />;
             case 'login':
                 return <LoginIcon width={16} height={16} />;
+            case 'arrow-up':
+                return <ArrowUpIcon width={16} height={16} />;
+            case 'star':
+                return <StarIcon width={16} height={16} />;
             default:
                 return null;
         }
