@@ -1,5 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import { OrderCard } from '../../../components/order-card/order-card';
+import { OrderCard } from '../../../components/cards/order-card';
 
 export default createBoard({
     name: 'OrderCard',

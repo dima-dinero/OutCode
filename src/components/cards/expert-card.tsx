@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import styles from './expert-card.module.scss';
+import styles from './card.module.scss';
 import { Avatar } from '../avatar/avatar';
 import { InstrumentTag } from '../instrument-tag/instrument-tag';
 import { CircleButton } from '../circle-button/circle-button';
@@ -73,33 +73,33 @@ export const ExpertCard = ({ className, profile = defaultProfile }: ExpertCardPr
         'https://static.wixstatic.com/media/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg/v1/fill/w_600,h_399,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg';
 
     return (
-        <div className={classNames(className, styles['user-card'])}>
-            <div className={styles['user-card_left']}>
-                <a href="/" className={styles['user-card_avatar-link']}>
+        <div className={classNames(className, styles['card'])}>
+            <div className={styles['card_left']}>
+                <a href="/" className={styles['card_avatar-link']}>
                     <Avatar
                         firstName={profile.first_name || defaultProfile.first_name}
                         lastName={profile.last_name || defaultProfile.last_name}
                         size="medium"
                     />
                 </a>
-                <div className={styles['user-card_info-wrapper']}>
-                    <div className={styles['user-card_info']}>
-                        <div className={styles['user-card_info-top']}>
+                <div className={styles['card_info-wrapper']}>
+                    <div className={styles['card_info']}>
+                        <div className={styles['card_info-top']}>
                             <a href="/">
-                                <h2 className={styles['user-card_heading']}>
+                                <h2 className={styles['card_heading']}>
                                     {(profile.first_name || defaultProfile.first_name) +
                                         ' ' +
                                         (profile.last_name || defaultProfile.last_name)}
                                 </h2>
                             </a>
-                            <span className={styles['user-card_text-secondary']}>
+                            <span className={styles['card_text-secondary']}>
                                 {profile.specialisation || defaultProfile.specialisation}
                             </span>
                         </div>
-                        <p className={styles['user-card_description']}>
+                        <p className={styles['card_description']}>
                             {profile.description || defaultProfile.description}
                         </p>
-                        <div className={styles['user-card_instruments-wrapper']}>
+                        <div className={styles['card_instruments-wrapper']}>
                             {(profile.instruments || defaultProfile.instruments)?.map(
                                 (instrument) => (
                                     <InstrumentTag
@@ -111,22 +111,22 @@ export const ExpertCard = ({ className, profile = defaultProfile }: ExpertCardPr
                         </div>
                     </div>
                     {(profile.hasCases ?? defaultProfile.hasCases) && (
-                        <div className={styles['user-card_cases-wrapper']}>
+                        <div className={styles['card_cases-wrapper']}>
                             {(profile.cases || defaultProfile.cases)
-                                ?.slice(0, 4)
+                                ?.slice(0, 3)
                                 .map((caseItem) => (
                                     <a
                                         key={caseItem.id}
                                         href="/"
-                                        className={styles['user-card_case-preview']}
+                                        className={styles['card_case-preview']}
                                     >
                                         <img
                                             src={caseItem.previewURL || defaultPreviewURL}
                                             alt={caseItem.title || 'Case'}
-                                            className={styles['user-card_case-image']}
+                                            className={styles['card_case-image']}
                                         />
-                                        <div className={styles['user-card_case-hover']}>
-                                            <h3 className={styles['user-card_case-title']}>
+                                        <div className={styles['card_case-hover']}>
+                                            <h3 className={styles['card_case-title']}>
                                                 {caseItem.title || 'Untitled Case'}
                                             </h3>
                                         </div>
@@ -136,18 +136,18 @@ export const ExpertCard = ({ className, profile = defaultProfile }: ExpertCardPr
                     )}
                 </div>
             </div>
-            <div className={styles['user-card_right']}>
-                <div className={styles['user-card_info-top']}>
-                    <p className={styles['user-card_heading']}>
+            <div className={styles['card_right']}>
+                <div className={styles['card_info-top']}>
+                    <p className={styles['card_heading']}>
                         {'From ' +
                             (profile.price || defaultProfile.price) +
                             (profile.currency || defaultProfile.currency)}
                     </p>
-                    <span className={styles['user-card_text-secondary']}>
+                    <span className={styles['card_text-secondary']}>
                         {profile.rate || defaultProfile.rate}
                     </span>
                 </div>
-                <div className={styles['user-card_buttons-wrapper']}>
+                <div className={styles['card_buttons-wrapper']}>
                     <CircleButton size="medium" iconType="star" />
                     <a href="/">
                         <CircleButton size="medium" iconType="arrow-up" />

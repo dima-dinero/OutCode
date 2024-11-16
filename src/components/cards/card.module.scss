@@ -1,4 +1,4 @@
-.user-card {
+.card {
   padding: 1.5rem;
   border-radius: 1.5rem;
   background-color: var(--background-secondary);
@@ -8,14 +8,14 @@
   justify-content: space-between;
 }
 
-.user-card_left {
+.card_left {
   display: flex;
   gap: 1.5rem;
   max-width: 48.5rem;
   align-items: start;
 }
 
-.user-card_right {
+.card_right {
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -24,65 +24,64 @@
   gap: 2rem;
 }
 
-.user-card_heading {
+.card_heading {
   line-height: 1.4;
   font-size: 1.15rem;
   font-weight: 400;
 }
 
-.user-card_text-secondary {
-  font-size: 0.85rem;
+.card_text-secondary {
+  font-size: 0.875rem;
   opacity: 0.8;
   line-height: 1.6;
   font-weight: 300;
 }
 
-.user-card_info-wrapper {
+.card_info-wrapper {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   align-items: start;
 }
 
-.user-card_info {
+.card_info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: start;
 }
 
-.user-card_buttons-wrapper {
+.card_buttons-wrapper {
   display: flex;
   gap: 0.5rem;
 }
 
-.user-card_avatar-link:active {
+.card_avatar-link:active {
   transform: scale(0.9);
 }
 
-.user-card_instruments-wrapper {
+.card_instruments-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.user-card_description {
+.card_description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 5;
-  line-height: 1.5;
 }
 
-.user-card_cases-wrapper {
+.card_cases-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
 }
 
-.user-card_case-preview {
+.card_case-preview {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 1.5rem;
@@ -95,18 +94,18 @@
   position: relative;
 }
 
-.user-card_case-preview:hover .user-card_case-hover {
+.card_case-preview:hover .card_case-hover {
   visibility: visible;
   opacity: 1;
 }
 
-.user-card_case-image {
+.card_case-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.user-card_case-hover {
+.card_case-hover {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -123,8 +122,24 @@
   padding: 1.5rem;
 }
 
-.user-card_case-title {
+.card_case-title {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
+}
+
+.card_icons-wrapper {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.card_icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1;
+  font-size: 0.875rem;
+  font-weight: 300;
+  opacity: 0.8;
 }

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import styles from './experts.module.scss';
 import { FiltersSidebar } from '../../components/filters-sidebar/filters-sidebar';
 import { BreadCrumbs } from '../../components/bread-crumbs/bread-crumbs';
-import { ExpertCard } from '../../components/expert-card/expert-card';
+import { ExpertCard } from '../../components/cards/expert-card';
 
 export interface ExpertsProps {
     className?: string;

@@ -1,5 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import { ExpertCard } from '../../../components/expert-card/expert-card';
+import { ExpertCard } from '../../../components/cards/expert-card';
 
 export default createBoard({
     name: 'ExpertCard',

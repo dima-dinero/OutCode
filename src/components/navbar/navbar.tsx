@@ -49,22 +49,22 @@ export const Navbar = ({ className }: NavbarProps) => {
                     </li>
                     <li>
                         <NavLink
-                            to="/about"
-                            className={({ isActive }) =>
-                                classNames(styles.navbar_link, { [styles['is-active']]: isActive })
-                            }
-                        >
-                            About
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
                             to="/orders"
                             className={({ isActive }) =>
                                 classNames(styles.navbar_link, { [styles['is-active']]: isActive })
                             }
                         >
                             Orders
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) =>
+                                classNames(styles.navbar_link, { [styles['is-active']]: isActive })
+                            }
+                        >
+                            About
                         </NavLink>
                     </li>
                 </ul>
