@@ -3,7 +3,7 @@ import { OrderCard } from '../../../components/cards/order-card';
 
 export default createBoard({
     name: 'OrderCard',
-    Board: () => <OrderCard />,
+    Board: () => <OrderCard order={{}} />,
     environmentProps: {
         windowWidth: 1110,
     },

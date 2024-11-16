@@ -3,6 +3,7 @@ import styles from './card.module.scss';
 import { Avatar } from '../avatar/avatar';
 import { InstrumentTag } from '../instrument-tag/instrument-tag';
 import { CircleButton } from '../circle-button/circle-button';
+import { formatPrice } from '../../utils/formatPrice';
 
 export interface Instrument {
     id?: number;
@@ -38,10 +39,10 @@ const defaultProfile: Profile = {
     last_name: 'Surname',
     specialisation: 'Specialisation',
     instruments: [
-        { id: 1, title: 'Webflow' },
-        { id: 2, title: 'Figma' },
+        { id: 1, title: 'Instrument 1' },
+        { id: 2, title: 'Instrument 2' },
     ],
-    price: 500,
+    price: 1000,
     currency: '$',
     rate: 'per hour',
     description: 'Placeholder description',
@@ -71,6 +72,8 @@ const defaultProfile: Profile = {
 export const ExpertCard = ({ className, profile = defaultProfile }: ExpertCardProps) => {
     const defaultPreviewURL =
         'https://static.wixstatic.com/media/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg/v1/fill/w_600,h_399,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg';
+
+    const formattedPrice = formatPrice(profile.price || defaultProfile.price);
 
     return (
         <div className={classNames(className, styles['card'])}>
@@ -139,9 +142,7 @@ export const ExpertCard = ({ className, profile = defaultProfile }: ExpertCardPr
             <div className={styles['card_right']}>
                 <div className={styles['card_info-top']}>
                     <p className={styles['card_heading']}>
-                        {'From ' +
-                            (profile.price || defaultProfile.price) +
-                            (profile.currency || defaultProfile.currency)}
+                        {'From ' + formattedPrice + (profile.currency || defaultProfile.currency)}
                     </p>
                     <span className={styles['card_text-secondary']}>
                         {profile.rate || defaultProfile.rate}
